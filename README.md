@@ -1,1 +1,1 @@
-# Spotify-Clone
+# My Music App
