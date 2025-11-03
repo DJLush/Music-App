@@ -68,17 +68,18 @@ function setupCardListeners() {
   cards.forEach((card, index) => {
     card.addEventListener('click', () => {
       const folders = [
-        'songs/cs',
-        'songs/rock',
-        'songs/pop',
-        'songs/mala'
-        
+        'songs/1',
+        'songs/2',
+        'songs/3',
+        'songs/4',
+        'songs/5',
+	    'songs/6'
       ];
       const folderToLoad = folders[index] || 'songs';
       loadMusicFolder(folderToLoad);
       const mainHeading = document.getElementById('main-h1');
       if (mainHeading) {
-        const folderNames = ['CS Songs', 'Rock Songs', 'Pop Songs', 'All Songs'];
+        const folderNames = ['Frank', 'Elvis', 'Pop Songs', 'All Songs'];
         mainHeading.textContent = folderNames[index] || 'Songs';
       }
       cards.forEach(c => c.classList.remove('active'));
@@ -107,7 +108,7 @@ function getSongs(folder = 'songs') {
                             <img class="invert" src="resourses/musik.svg">
                             <div class="songInfo">
                                 <div>${song}</div>
-                                <div>Waris</div>
+                               
                             </div>
                             <div class="playCont">
                                 <div class="playNow">
